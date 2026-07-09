@@ -75,7 +75,9 @@ def main():
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("status", status))
     app.add_handler(CommandHandler("toggle", toggle))
-    app.add_handler(MessageHandler(filters.TEXT & \~filters.COMMAND, handle_message))
+    app.add_handler(
+      MessageHandler(filters.TEXT & ~filte.COMMAND, handle_message)
+      )
     print("🚀 Bot running...")
     app.run_polling()
 
