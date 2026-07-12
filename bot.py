@@ -22,7 +22,8 @@ driver = None
 visitor_email = None
 visitor_password = None
 def is_admin(update: Update) -> bool:
-        return update.effective_chat.id ==6546086469
+      return update.effective_chat.id == ADMIN_CHAT_ID
+
 
 
 def get_initialized_driver():
